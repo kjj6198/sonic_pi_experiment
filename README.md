@@ -2,6 +2,8 @@
 
 Thanks to [sonic pi](https://sonic-pi.net/), we can create music by programming.
 
+Inspried from wiwi(NiceChord) and Sam Aaron
+
 ## My experiments
 
 **Please notice that some of melody is not created by me, I don't have any credit for that, don't copy the melody for commercial purpose**
