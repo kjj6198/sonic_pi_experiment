@@ -22,3 +22,20 @@ live_loop :hihat2 do
   sample :drum_cowbell
   sleep 1
 end
+
+live_loop :chord do
+  play_chord chord(:c3, :major)
+  sleep 1
+  play_chord chord(:f3, :major)
+  sleep 0.5
+  play_chord chord(:c3, :major)
+  sleep 0.5
+  play_chord chord(:g3, :major)
+  sleep 0.5
+  play_chord chord(:c3, :major)
+  sleep 0.5
+  play_chord chord(:g3, :major)
+  sleep 0.5
+  play_chord chord(:c3, :major)
+  sleep 0.5
+end

@@ -14,7 +14,6 @@ live_loop :snare do
 end
 
 
-
 live_loop :kick do
   with_fx :sound_out_stereo do
     sample :bd_tek
