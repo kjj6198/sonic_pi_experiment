@@ -52,3 +52,25 @@ define :create_my_beat do |tempo|
 end
 
 my_tempo = "*--*--*-" # ring (true, false, false, true, false, false, true, flase)
+
+
+my_tempo = create_my_beat("*--*--*-") # ring (true, false, false, true, false, false, true, flase)
+melody = ring(:a5, :c6, :a5, :a5, :c6, :a5, :a5, :c6, :a5, :b5, :a5, :g5)
+
+live_loop :my_beat do
+  if my_tempo.tick(:name) then
+    sample :drum_heavy_kick
+    play melody.tick(:name1), release: 0.25
+  end
+  sleep 0.125
+end
+
+chord(:c4, :major).each do |note|
+  play note
+  sleep 0.25
+end
+
+current_beat = tick
+tick += 1
+play scale(:c4, :major)[current_beat]
+play chord(:c4, :major)[current_beat]

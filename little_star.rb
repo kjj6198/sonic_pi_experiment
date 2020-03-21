@@ -39,3 +39,11 @@ live_loop :chord do
   play_chord chord(:c3, :major)
   sleep 0.5
 end
+
+with_fx :echo do
+  notes.each_with_index do |n, i|
+    use_synth :beep
+    play n, amp: 0.7, release: 0.4
+    sleep 0.25
+  end
+end
